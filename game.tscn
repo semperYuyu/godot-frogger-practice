@@ -5,11 +5,14 @@
 [ext_resource type="PackedScene" uid="uid://be3msyf6n508b" path="res://trees_n_boxes.tscn" id="3_feb5d"]
 
 [node name="Game" type="Node2D" unique_id=1689207090]
+metadata/_edit_horizontal_guides_ = [-320.0]
+metadata/_edit_vertical_guides_ = [-192.0]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1399933435]
 texture = ExtResource("1_80nbo")
 
 [node name="Player" parent="." unique_id=607294067 instance=ExtResource("2_e2o6t")]
+position = Vector2(95, 23)
 
 [node name="TreesNBoxes" parent="." unique_id=1842588249 instance=ExtResource("3_feb5d")]
 position = Vector2(69, 26)
