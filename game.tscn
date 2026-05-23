@@ -2,10 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://doghmovcgeltw" path="res://graphics/map.png" id="1_80nbo"]
 [ext_resource type="PackedScene" uid="uid://bjy1c24lq0gf7" path="res://player.tscn" id="2_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://be3msyf6n508b" path="res://trees_n_boxes.tscn" id="3_feb5d"]
 
 [node name="Game" type="Node2D" unique_id=1689207090]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1399933435]
 texture = ExtResource("1_80nbo")
 
-[node name="Player" parent="Sprite2D" unique_id=607294067 instance=ExtResource("2_e2o6t")]
+[node name="Player" parent="." unique_id=607294067 instance=ExtResource("2_e2o6t")]
+
+[node name="TreesNBoxes" parent="." unique_id=1842588249 instance=ExtResource("3_feb5d")]
+position = Vector2(69, 26)

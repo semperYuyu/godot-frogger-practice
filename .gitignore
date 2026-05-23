@@ -1,3 +1,13 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+*.uid
+
+# Mono/C# stuff (if i ever use that)
+.mono/
+data_*/
+
+
+# OS stuff
+.DS_Store
+Thumbs.db
