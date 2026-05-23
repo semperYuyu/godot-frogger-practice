@@ -4,13 +4,11 @@ local trees_n_boxes_size_scale = {
 
 --// i do believe that this script is temporary and just for testing :D
 function trees_n_boxes_size_scale:_ready()
-	print(self.scale, "init")
 	scale_Change_Rate = 1.5 --// purposefully not local
 	time_Passed = 0
 end
 function trees_n_boxes_size_scale:_physics_process(delta_Time)
 	--// please never name your scripts like this again
-	print(math.floor(time_Passed), self.scale)
 	self.scale = self.scale * (scale_Change_Rate ^ delta_Time)
 	--// every second, scale increases by 50%
 	
