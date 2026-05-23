@@ -1,15 +1,17 @@
 local player = {
-	extends = Node2D,
+	extends = CharacterBody2D,
 }
 
 local direction = Vector2(1, 1)
-local speed = 5
+local speed = 100
 local cooldown = 0
 
 
 function player:_physics_process(delta_Time)
 --// input:get_vector() takes all of your inputs and returns a vector based on them
 	 direction = Input:get_vector("Left", "Right", "Up", "Down")
+	 self.velocity = direction * speed
+	 self:move_and_slide()
 	
 	 if Input:is_action_pressed("Something") and cooldown <= 0 then
 	 	print("something")
@@ -24,6 +26,5 @@ function player:_physics_process(delta_Time)
 	 -- (i.e.) if Input:is_action_pressed("Left") then 
 	 --        	direction = Vector2.LEFT
 	 --        elseif... etc. etc.
-	 self.position = self.position + direction * speed
 end
 return player;

@@ -1,15 +1,17 @@
-local trees_n_boxes_size_scale = {
-	extends = Node2D,
-}
+-- disabling this script since no longer needed --
+
+--local trees_n_boxes_size_scale = {
+	--extends = Node2D,
+--}
 
 --// i do believe that this script is temporary and just for testing :D
-function trees_n_boxes_size_scale:_ready()
-	scale_Change_Rate = 1.01 --// purposefully not local
-	time_Passed = 0
-end
-function trees_n_boxes_size_scale:_physics_process(delta_Time)
+--function trees_n_boxes_size_scale:_ready()
+	--scale_Change_Rate = 1.01 --// purposefully not local
+	--time_Passed = 0
+--end
+--function trees_n_boxes_size_scale:_physics_process(delta_Time)
 	--// please never name your scripts like this again
-	self.scale = self.scale * (scale_Change_Rate ^ delta_Time)
+	--self.scale = self.scale * (scale_Change_Rate ^ delta_Time)
 	--// every second, scale increases by 50%
 	
 	
@@ -39,8 +41,8 @@ self.scale = self.scale + self.scale * 1.5 * delta
 The problem is that as your scale grows, each frame adds a bigger amount, making it spiral out of control faster than intended. The ^delta approach always stays true to "exactly 1.5x per second" no matter what.
 	
 	]]--
-	time_Passed = time_Passed + delta_Time
-
-end
-
-return trees_n_boxes_size_scale
+	--time_Passed = time_Passed + delta_Time
+--
+--end
+--
+--return trees_n_boxes_size_scale
