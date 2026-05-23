@@ -6,13 +6,31 @@ local direction = Vector2(1, 1)
 local speed = 100
 local cooldown = 0
 
+function player:animation()
+	local AnimatedSprite2D = self:get_node("AnimatedSprite2D")
+	
+	if direction:length() == 0 then
+	-- // have to check length instead of not
+	-- // Vector2() is still truthy in lua, so not wont work !
+		AnimatedSprite2D.frame = 0
+	elseif direction.x ~= 0 then
+		AnimatedSprite2D:play("Horizontal")
+		AnimatedSprite2D.flip_h = direction.x > 0
+	elseif direction.y < 0 then
+		AnimatedSprite2D:play("Up")
+	elseif direction.y > 0 then 
+		AnimatedSprite2D:play("Down")
+	end
+
+end
+
 
 function player:_physics_process(delta_Time)
 --// input:get_vector() takes all of your inputs and returns a vector based on them
 	 direction = Input:get_vector("Left", "Right", "Up", "Down")
 	 self.velocity = direction * speed
+	 self:animation()
 	 self:move_and_slide()
-	
 	 if Input:is_action_pressed("Something") and cooldown <= 0 then
 	 	print("something")
 		cooldown = 1
@@ -27,4 +45,5 @@ function player:_physics_process(delta_Time)
 	 --        	direction = Vector2.LEFT
 	 --        elseif... etc. etc.
 end
+
 return player;
