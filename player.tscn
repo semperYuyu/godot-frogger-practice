@@ -114,6 +114,5 @@ shape = SubResource("RectangleShape2D_onrkg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1391595479]
 sprite_frames = SubResource("SpriteFrames_2hs0m")
-animation = &"Up"
-frame = 1
-frame_progress = 0.28092754
+animation = &"Down"
+autoplay = "Down"

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://r8e5vdmp0k17"]
 
 [ext_resource type="Texture2D" uid="uid://doghmovcgeltw" path="res://graphics/map.png" id="1_80nbo"]
+[ext_resource type="Script" uid="uid://bslnqs173smpn" path="res://game.lua" id="1_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://bjy1c24lq0gf7" path="res://player.tscn" id="2_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://be3msyf6n508b" path="res://trees_n_boxes.tscn" id="3_feb5d"]
 
@@ -8,9 +9,13 @@
 size = Vector2(20, 640)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fc0e3"]
-size = Vector2(424.5, 19)
+size = Vector2(424, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7jktm"]
+size = Vector2(382, 19)
 
 [node name="Game" type="Node2D" unique_id=1689207090]
+script = ExtResource("1_fc0e3")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1399933435]
 texture = ExtResource("1_80nbo")
@@ -37,12 +42,26 @@ shape = SubResource("RectangleShape2D_feb5d")
 [node name="top_Wall" type="StaticBody2D" parent="." unique_id=89149776]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="top_Wall" unique_id=1576720121]
-position = Vector2(-0.25, -329.5)
+position = Vector2(0, -329.5)
 shape = SubResource("RectangleShape2D_fc0e3")
 
 [node name="bottom_Wall" type="StaticBody2D" parent="." unique_id=1491951944]
 position = Vector2(0, 659)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bottom_Wall" unique_id=473979224]
-position = Vector2(-0.25, -329.5)
+position = Vector2(0, -329.5)
 shape = SubResource("RectangleShape2D_fc0e3")
+
+[node name="Timer" type="Timer" parent="." unique_id=916939829]
+wait_time = 4.0
+autostart = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=762245601]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=350084177]
+position = Vector2(0, -309.5)
+shape = SubResource("RectangleShape2D_7jktm")
+debug_color = Color(0.95571464, 1.4439225e-06, 0.54431456, 0.41960785)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
