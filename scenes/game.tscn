@@ -65,9 +65,11 @@ autostart = true
 
 [node name="Player" parent="Objects" unique_id=607294067 instance=ExtResource("3_p57ef")]
 position = Vector2(95, 23)
+collision_layer = 2
+collision_mask = 13
 
 [node name="TreesNBoxes" parent="Objects" unique_id=1842588249 instance=ExtResource("4_u5sy4")]
-position = Vector2(69, 26)
+position = Vector2(70, 32)
 script = null
 
 [node name="CarStartPositions" type="Node2D" parent="." unique_id=1139184982]

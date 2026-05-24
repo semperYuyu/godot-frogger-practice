@@ -7,6 +7,8 @@
 size = Vector2(21, 13)
 
 [node name="Car" type="Area2D" unique_id=1335874818]
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("1_qt2eu")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1177967504]
