@@ -2,13 +2,13 @@ local player = {
 	extends = CharacterBody2D,
 }
 
-local direction = Vector2(1, 1)
-local speed = 100
-local cooldown = 0
+function player:_ready()
+	direction = Vector2(1, 1)
+	speed = 100
+	AnimatedSprite2D = self:get_node("AnimatedSprite2D")
+end
 
 function player:animation()
-	local AnimatedSprite2D = self:get_node("AnimatedSprite2D")
-	
 	if direction:length() == 0 then
 	-- // have to check length instead of not
 	-- // Vector2() is still truthy in lua, so not wont work !
@@ -21,7 +21,7 @@ function player:animation()
 	elseif direction.y > 0 then 
 		AnimatedSprite2D:play("Down")
 	end
-
+	return
 end
 
 
@@ -31,12 +31,16 @@ function player:_physics_process(delta_Time)
 	 self.velocity = direction * speed
 	 self:animation()
 	 self:move_and_slide()
-	 if Input:is_action_pressed("Something") and cooldown <= 0 then
-	 	print("something")
-		cooldown = 1
-	 elseif cooldown > 0 then
-	 	cooldown = cooldown - delta_Time
+	
+	 if Input:is_action_just_pressed("Something") then
+		print("something")
 	 end
+	 --if Input:is_action_pressed("Something") and cooldown <= 0 then
+	 	--print("something")
+		--cooldown = 1
+	 --elseif cooldown > 0 then
+	 	--cooldown = cooldown - delta_Time
+	 --end
 	--// couldve also used is_action_just_pressed() instead of a cooldown
 	
 	

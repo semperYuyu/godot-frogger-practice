@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://be3msyf6n508b"]
 
-[ext_resource type="Script" uid="uid://cnxoqcapamels" path="res://trees_n_boxes_size_scale.lua" id="1_10uic"]
+[ext_resource type="Script" uid="uid://b00auoun03t8o" path="res://trees_n_boxes_size_scale.lua" id="1_10uic"]
 [ext_resource type="Texture2D" uid="uid://y78osdw0bolc" path="res://graphics/objects/box1.png" id="1_js2g2"]
 [ext_resource type="Texture2D" uid="uid://d0so81ys3820n" path="res://graphics/objects/tree1.png" id="2_10uic"]
 [ext_resource type="Texture2D" uid="uid://y3ndpd5bhsi3" path="res://graphics/objects/tree2.png" id="3_5b2e1"]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://r8e5vdmp0k17"]
 
 [ext_resource type="Texture2D" uid="uid://doghmovcgeltw" path="res://graphics/map.png" id="1_80nbo"]
-[ext_resource type="Script" uid="uid://bslnqs173smpn" path="res://game.lua" id="1_fc0e3"]
+[ext_resource type="Script" uid="uid://d20raon6q5fko" path="res://game.lua" id="1_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://bjy1c24lq0gf7" path="res://player.tscn" id="2_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://be3msyf6n508b" path="res://trees_n_boxes.tscn" id="3_feb5d"]
 
@@ -25,6 +25,7 @@ position = Vector2(95, 23)
 
 [node name="TreesNBoxes" parent="." unique_id=1842588249 instance=ExtResource("3_feb5d")]
 position = Vector2(69, 26)
+script = null
 
 [node name="left_Wall" type="StaticBody2D" parent="." unique_id=1653038729]
 

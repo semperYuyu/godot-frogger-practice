@@ -1,8 +1,12 @@
+
 -- disabling this script since no longer needed --
 
---local trees_n_boxes_size_scale = {
-	--extends = Node2D,
---}
+local trees_n_boxes_size_scale = {
+	extends = Node2D,
+}
+
+return trees_n_boxes_size_scale
+-- keeping lines 4 - 9 because godot yells if i have a script without those
 
 --// i do believe that this script is temporary and just for testing :D
 --function trees_n_boxes_size_scale:_ready()
@@ -45,4 +49,3 @@ The problem is that as your scale grows, each frame adds a bigger amount, making
 --
 --end
 --
---return trees_n_boxes_size_scale

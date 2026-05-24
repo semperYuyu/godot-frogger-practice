@@ -9,6 +9,6 @@ end
 
 function game:_on_area_2d_body_entered(body)
 	print("what the")
-	print(type(body))
 end
+
 return game
