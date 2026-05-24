@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bjy1c24lq0gf7"]
 
-[ext_resource type="Script" uid="uid://bjbp66x55706k" path="res://player.lua" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://bjbp66x55706k" path="res://scripts/player.lua" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://c4q6c7mxqh78h" path="res://graphics/player/player_tileset.png" id="2_onrkg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
