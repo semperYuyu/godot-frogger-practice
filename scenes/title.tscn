@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://c4nuku2axvrrg"]
+
+[ext_resource type="Script" uid="uid://t1vsnsiq00a" path="res://scenes/title.lua" id="1_p6dhs"]
+[ext_resource type="FontFile" uid="uid://hqpa84d2dqvp" path="res://fonts/Better VCR 9.0.1.ttf" id="2_pyl7j"]
+[ext_resource type="Texture2D" uid="uid://bkgrir378horu" path="res://graphics/player/player_simple.png" id="3_b3w7a"]
+
+[node name="Title" type="Control" unique_id=1388906801]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p6dhs")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=20567174]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.30796134, 0.11775231, 0.29544756, 1)
+
+[node name="Label" type="Label" parent="." unique_id=911126415]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -577.5
+offset_top = -88.0
+offset_right = 577.5
+offset_bottom = -212.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_pyl7j")
+theme_override_font_sizes/font_size = 140
+text = "Car Game :D"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=659478708]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -6.0
+offset_top = -7.0
+offset_right = 6.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(10, 10)
+texture = ExtResource("3_b3w7a")
+
+[node name="HighScoreLabel" type="Label" parent="." unique_id=46107083]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 50.0
+offset_top = 317.0
+offset_right = 59.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_pyl7j")
+theme_override_font_sizes/font_size = 30
+text = "High score: Grievous \\n Error"
+horizontal_alignment = 1

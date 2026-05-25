@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://dtihi32g4hj7g" path="res://scenes/parked_car.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://c5spl74t6mgmk" path="res://scenes/lights.tscn" id="7_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://bykvavuyy06ke" path="res://scenes/bench.tscn" id="8_gee14"]
+[ext_resource type="FontFile" uid="uid://hqpa84d2dqvp" path="res://fonts/Better VCR 9.0.1.ttf" id="9_0tnpc"]
+[ext_resource type="Script" uid="uid://cqy7r54u3xxra" path="res://scenes/Label.lua" id="10_vtaks"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_feb5d"]
 size = Vector2(20, 640)
@@ -174,5 +176,27 @@ position = Vector2(-198, -98)
 [node name="Marker2D9" type="Marker2D" parent="CarStartPositions" unique_id=1820948870]
 position = Vector2(200, -118)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=688808847]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1868685862]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_top = 27.0
+offset_right = 45.5
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("9_0tnpc")
+theme_override_font_sizes/font_size = 30
+text = "Time Passed: 0s"
+horizontal_alignment = 1
+script = ExtResource("10_vtaks")
+
+[node name="Timer" type="Timer" parent="CanvasLayer/Label" unique_id=1412322047]
+autostart = true
+
 [connection signal="body_entered" from="Borders/FinishArea2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="Timer/CarTimer" to="." method="_on_car_timer_timeout"]
+[connection signal="timeout" from="CanvasLayer/Label/Timer" to="CanvasLayer/Label" method="_on_timer_timeout"]
