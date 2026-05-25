@@ -18,7 +18,7 @@ function player:animation()
 		AnimatedSprite2D.flip_h = direction.x > 0
 	elseif direction.y < 0 then
 		AnimatedSprite2D:play("Up")
-	elseif direction.y > 0 then 
+	elseif direction.y > 0 then
 		AnimatedSprite2D:play("Down")
 	end
 	return
@@ -31,21 +31,21 @@ function player:_physics_process(delta_Time)
 	 self.velocity = direction * speed
 	 self:animation()
 	 self:move_and_slide()
-	
-	 if Input:is_action_just_pressed("Something") then
-		print("something")
+
+	 if Input:is_action_just_pressed("Confirm") then
+		print("no way")
 	 end
-	 --if Input:is_action_pressed("Something") and cooldown <= 0 then
-	 	--print("something")
+	 --if Input:is_action_pressed("Confirm") and cooldown <= 0 then
+	 	--print("no way")
 		--cooldown = 1
 	 --elseif cooldown > 0 then
 	 	--cooldown = cooldown - delta_Time
 	 --end
 	--// couldve also used is_action_just_pressed() instead of a cooldown
-	
-	
+
+
 	 --// line 11 is the same as 4 if statements checking input and returning a vector
-	 -- (i.e.) if Input:is_action_pressed("Left") then 
+	 -- (i.e.) if Input:is_action_pressed("Left") then
 	 --        	direction = Vector2.LEFT
 	 --        elseif... etc. etc.
 end
