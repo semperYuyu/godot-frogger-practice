@@ -9,7 +9,7 @@
 size = Vector2(26, 8)
 
 [node name="TreesNBoxes" type="StaticBody2D" unique_id=667239366]
-collision_mask = 14
+collision_mask = 2
 script = ExtResource("1_10uic")
 
 [node name="Box1" type="Sprite2D" parent="." unique_id=605507691]

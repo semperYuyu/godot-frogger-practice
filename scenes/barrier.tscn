@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dxqhah6wqbajo"]
+
+[ext_resource type="Texture2D" uid="uid://c5iy3tuxd0vaw" path="res://graphics/objects/barrier.png" id="1_qfl2k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ilpk"]
+size = Vector2(80, 10)
+
+[node name="barrier" type="StaticBody2D" unique_id=2098559030]
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=505997163]
+texture = ExtResource("1_qfl2k")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=428702139]
+position = Vector2(-32, 0)
+texture = ExtResource("1_qfl2k")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=1158054189]
+position = Vector2(32, 0)
+texture = ExtResource("1_qfl2k")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1757710635]
+position = Vector2(-16, 0)
+texture = ExtResource("1_qfl2k")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=167203208]
+position = Vector2(16, 0)
+texture = ExtResource("1_qfl2k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=985824696]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_8ilpk")
