@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bykvavuyy06ke" path="res://scenes/bench.tscn" id="8_gee14"]
 [ext_resource type="FontFile" uid="uid://hqpa84d2dqvp" path="res://fonts/Better VCR 9.0.1.ttf" id="9_0tnpc"]
 [ext_resource type="Script" uid="uid://cqy7r54u3xxra" path="res://scenes/Label.lua" id="10_vtaks"]
+[ext_resource type="AudioStream" uid="uid://d05385du5fc0j" path="res://audio/S31-City on Speed.ogg" id="11_kvpfn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_feb5d"]
 size = Vector2(20, 640)
@@ -196,6 +197,12 @@ script = ExtResource("10_vtaks")
 
 [node name="Timer" type="Timer" parent="CanvasLayer/Label" unique_id=1412322047]
 autostart = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1291654178]
+stream = ExtResource("11_kvpfn")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true
 
 [connection signal="body_entered" from="Borders/FinishArea2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="Timer/CarTimer" to="." method="_on_car_timer_timeout"]
