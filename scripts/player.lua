@@ -3,7 +3,7 @@ local player = {
 }
 
 function player:_ready()
-	direction = Vector2(1, 1)
+	direction = Vector2()
 	speed = 100
 	AnimatedSprite2D = self:get_node("AnimatedSprite2D")
 end
